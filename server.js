@@ -5,6 +5,11 @@ const bodyParser  = require('body-parser');
 const cors        = require('cors');
 require('dotenv').config();
 
+// Importa y ejecuta el archivo connectDB.js
+// Este archivo contiene la configuración y lógica para conectar la aplicación a la base de datos MongoDB usando Mongoose.
+// Al requerirlo aquí, se establece la conexión a la base de datos cuando el servidor inicia.
+require("./connectDB.js");
+
 const apiRoutes         = require('./routes/api.js');
 const fccTestingRoutes  = require('./routes/fcctesting.js');
 const runner            = require('./test-runner');
